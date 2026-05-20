@@ -1,4 +1,4 @@
-# imports important libraries to model testing on ordinary linear regression with encoder for categorical variables
+# imports important libraries to model testing on label encoder algorithm
 import joblib as jb
 import numpy as np
 import pandas as pd
@@ -40,7 +40,7 @@ m = LinearRegression()
 m.fit(x_train, y_train)
 
 # store the trained model using joblib
-jb.dump(m, "model.jonlib")
+jb.dump(m, "ordinary_linear_regression_model.joblib")
 p = m.predict(x_test)
 
 # count mean squared error and root mean squared error
@@ -50,3 +50,10 @@ rmse = np.sqrt(mse)
 # print the mean squared error and root mean squared error:
 print("MSE:", mse)
 print("RMSE:", rmse)
+
+# comment and notes for this  model training code
+# this model use a label encoder to convert categorical variables to numeric values
+# BUT  lable encoder algorithm have issue of lable coparison and diffrence in label data
+# so in next model we will use one hot encoder to avoid this issue
+# also in next model we will use one hot encoder to convert categorical variables to numeric values
+# also in next model we will use

@@ -1,10 +1,14 @@
 import joblib as jb
 import pandas as pd
 
-model = jb.load("model.jonlib")
+model = jb.load("lasso_model.pkl")
 
 data = pd.DataFrame(
-    [{"year": 2026, "month": 5, "day": 19, "city": 34, "air": 2, "pollutant": 5}]
+    {
+        "City": ["Delhi"],
+        "Air Quality": ["Poor"],
+        "Prominent Pollutant": ["PM2.5"],
+    }
 )
 
 p = model.predict(data)
