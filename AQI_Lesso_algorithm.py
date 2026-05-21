@@ -13,7 +13,7 @@ df = pd.read_csv("air_quality.csv")
 x = df[["City", "Air Quality", "Prominent Pollutant"]]
 y = df["AQI Value"]
 
-xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_state=42)
+xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.20, random_state=42)
 
 cat_cols = ["City", "Air Quality", "Prominent Pollutant"]
 
