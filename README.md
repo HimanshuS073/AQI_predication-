@@ -3,4 +3,4 @@ a model algorithm that i have cover till yet
 1:simple linear regression
 2:Lasso regression
 3:Ridge regression lightgbm
-this are model thati train
+this are model that i train
